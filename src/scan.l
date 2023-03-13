@@ -673,11 +673,7 @@ void context_member(char *, const char *);
                    */
                 &&  (cclval = ccllookup( nmstr )) != 0 )
 				{
-#ifdef __cplusplus
 				if ( yyinput() != ']' )
-#else
-				if ( input() != ']' )
-#endif
 					synerr( _( "bad character class" ) );
 
 				yylval = cclval;
